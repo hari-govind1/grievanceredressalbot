@@ -1,0 +1,157 @@
+version: "3.1"
+
+stories:
+
+- story: path for asking issue 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: communicate_issue
+  - action: utter_ask_issue
+
+- story: path for electricity_issue 2
+  steps:
+  - intent: electricity_issue
+  - action: utter_ask_blocknumber
+  - intent: get_block_number
+    entities:
+    - block: "block A"
+    - block: "block B"
+    - block: "block C"
+    - block: "block D"
+    - block: "block E"
+    - block: "block F"
+    - block: "block G"
+  - action: action_get_block_number
+  - action: utter_issue_will_resolve
+  - intent: thank
+  - action: utter_thank
+
+- story: path for college_wifi_issue 2
+  steps:
+  - intent: college_wifi_issue
+  - action: utter_ask_blocknumber
+  - intent: get_block_number
+    entities:
+    - block: "block A"
+    - block: "block B"
+    - block: "block C"
+    - block: "block D"
+    - block: "block E"
+    - block: "block F"
+    - block: "block G"
+  - action: action_get_block_number
+  - action: utter_issue_will_resolve
+  - intent: thank
+  - action: utter_thank
+
+- story: path for food_hygiene_issue 2
+  steps:
+  - intent: food_hygiene_issue
+  - action: utter_food_hygiene_issue
+  - action: utter_issue_will_resolve
+  - intent: thank
+  - action: utter_thank
+
+- story: path for drinking_water_issue 2
+  steps:
+  - intent: drinking_water_issue
+  - action: utter_ask_blocknumber
+  - intent: get_block_number
+    entities:
+    - block: "block A"
+    - block: "block B"
+    - block: "block C"
+    - block: "block D"
+    - block: "block E"
+    - block: "block F"
+    - block: "block G"
+  - action: action_get_block_number
+  - action: utter_issue_will_resolve
+  - intent: thank
+  - action: utter_thank
+
+- story: path for sanitary_issue 2
+  steps:
+  - intent: sanitary_issue
+  - action: utter_ask_blocknumber
+  - intent: get_block_number
+    entities:
+    - block: "block A"
+    - block: "block B"
+    - block: "block C"
+    - block: "block D"
+    - block: "block E"
+    - block: "block F"
+    - block: "block G"
+  - action: action_get_block_number
+  - action: utter_issue_will_resolve
+  - intent: thank
+  - action: utter_thank
+
+- story: path for infrastructure_issue 2
+  steps:
+  - intent: infrastructure_issue
+  - action: utter_ask_blocknumber
+  - intent: get_block_number
+    entities:
+    - block: "block A"
+    - block: "block B"
+    - block: "block C"
+    - block: "block D"
+    - block: "block E"
+    - block: "block F"
+    - block: "block G"
+  - action: action_get_block_number
+  - action: utter_issue_will_resolve
+  - intent: thank
+  - action: utter_thank
+
+- story: path for transportation_issue 2
+  steps:
+  - intent: transportation_issue
+  - action: utter_ask_busnumber
+  - intent: get_bus_number
+    entities:
+    - bus_number: "10A"
+    - bus_number: "10B"
+    - bus_number: "10C"
+    - bus_number: "9A"
+    - bus_number: "9B"
+    - bus_number: "8A"
+    - bus_number: "8B"
+    - bus_number: "7A"
+    - bus_number: "6A"
+    - bus_number: "6B"
+    - bus_number: "7B"
+    - bus_number: "6C"
+  - action: action_get_bus_number
+  - action: utter_issue_will_resolve
+  - intent: thank
+  - action: utter_thank
+  
+- story: path for lab_issue 2
+  steps:
+  - intent: lab_issue
+  - action: utter_ask_labnumberorname
+  - intent: get_lab_numberorname
+    entities:
+    - lab_info: "lab1"
+    - lab_info: "lab2"
+    - lab_info: "lab3"
+    - lab_info: "lab4"
+    - lab_info: "lab5"
+    - lab_info: "communication lab"
+    - lab_info: "IT project lab"
+    - lab_info: "CSE project lab"
+    - lab_info: "VLSI lab"
+  - action: action_get_lab_info
+  - action: utter_issue_will_resolve
+  - intent: thank
+  - action: utter_thank
+
+- story: Handle fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default_fallback
+

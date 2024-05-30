@@ -1,0 +1,347 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - I am 
+
+- intent: start
+  examples: |
+    - /start
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ok
+    - kk
+    - good
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: thank
+  examples: |
+    - thank you
+    - thanks
+    - thanks a lot
+    - thank you so much
+    - appreciate it
+    - thanks a bunch
+    - thanks for your help
+    - thank you very much
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+    - what is your name
+
+- intent: time_require
+  examples: |
+    - how long will it take
+    - when it will resolve
+    - how many days will it take
+    - how many hours will it take
+    - how long I should wait for the resolution
+    - when will I get the result
+    - when?
+
+- intent: communicate_issue
+  examples: |
+    - I have an issue in the college
+    - I have an problem
+    - problem in college
+    - I want file a grievance
+    - I need to report a problem.
+    - There's something I want to bring to your attention.
+    - Can I talk to someone about an issue?
+    - I need help
+    - help me
+    - assist me
+    - I have a concern I'd like to discuss.
+    - Is there a way to report a problem?
+    - I want to inform an issue.
+    - Something is not right, and I need assistance.
+    - How do I report an issue?
+    - I'm experiencing a problem and need help.
+
+- intent: electricity_issue
+  examples: |
+    - There is no electricity in the hostel.
+    - Our classroom has no lights.
+    - The lecture hall is without electricity.
+    - Power failure in the hostel.
+    - The power went out in the middle of our class.
+    - Our dormitory is facing an electricity problem.
+    - No lights in the study area due to a power failure.
+    - The entire block is without electricity.
+
+- intent: college_wifi_issue
+  examples: |
+    - The college Wi-Fi is too slow .
+    - No proper internet connection in college Wi-Fi.
+    - The Wi-Fi speed is unbearable.
+    - Constant disconnection issues in college Wi-Fi.
+    - Unable to connect to the college network.
+    - Wi-Fi in the library is not working.
+    - The Wi-Fi connection is not stable in the library.
+    - College Wi-Fi is down again.
+    - The internet in the classroom is unreliable.
+    - Can't connect to the college network from my dorm.
+    - The Wi-Fi signal is weak in the common area.
+    - The Wi-Fi is not working in the auditorium.
+
+- intent: food_hygiene_issue
+  examples: |
+    - The food in the canteen was not cooked properly.
+    - Plates in the hostel mess were not cleaned.
+    - The food court is not properly maintained.
+    - Canteen hygiene is a concern.
+    - Found a hair in the meal.
+    - Food in the hostel was not up to the mark.
+    - The hygiene in the hostel mess is terrible.
+    - The food in the canteen is not fit for consumption.
+    - The food court is unclean and untidy.
+    - There's a foul smell in the dining area.
+    - Canteen tables are sticky and unclean.
+    - The quality of food in the hostel is poor.
+
+- intent: drinking_water_issue
+  examples: |
+    - No drinking water supply in our block.
+    - There are no tumblers in the drinking water area.
+    - The drinking water tap is not working.
+    - The water cooler in our floor is not functional.
+    - No clean glasses for drinking water.
+    - No water supply in the hostel.
+    - No water supply in the water cooler.
+    - The water from the drinking tap is undrinkable.
+    - Tumblers are missing from the drinking water area.
+    - The water dispenser is out of order.
+    - The drinking water area is unhygienic.
+    - No clean glasses for water in the hostel.
+
+- intent: sanitary_issue
+  examples: |
+    - The bathroom is not properly cleaned.
+    - The restroom has no water supply.
+    - Washroom hygiene is a problem.
+    - Toilet in our block is not working.
+    - Found no soap in the bathroom.
+    - Restroom cleanliness is poor.
+    - The bathroom is in a disgusting state.
+    - There's no soap in the restroom.
+    - The toilet in our block is overflowing.
+    - Washroom cleanliness is unacceptable.
+    - The restroom floor is wet and dirty.
+    - Found insects in the bathroom.
+    
+
+- intent: infrastructure_issue
+  examples: |
+    - The fan in the classroom is not working.
+    - The blackboard in the lecture hall is damaged.
+    - Broken board in our classroom.
+    - The fan is not working properly.
+    - The benches in the lecture hall are uncomfortable.
+    - The fan in the classroom makes a lot of noise.
+    - The whiteboard in the study room is damaged.
+    - classroom not cleaned
+    - The lights in the corridor are flickering.
+    - Projector in class not working
+    - switch issue
+    - fan issue
+    - window problem
+    - door not locking
+    - broken door
+    - window not sliding
+    - Tubelight not working
+    - broken desk
+    - chairs broken
+    - broken chair
+    - broken dustbin
+    - no sufficient desks and chairs
+    - less desks
+    - less number of desks and chairs
+    - smart board not working
+
+
+- intent: transportation_issue
+  examples: |
+    - The college bus did not arrive on time.
+    - The bus schedule is unreliable.
+    - The transportation service is inconsistent.
+    - Problems with the college bus service.
+    - The bus is frequently delayed.
+    - The college bus is always overcrowded.
+    - The bus did not show up at the designated stop.
+    - The bus arrived very late today.
+    - There's a problem with the route of the college bus.
+    - The bus broke down on the way to college.
+    - bus seats are broken.
+    - bus seats are torn.
+    - bus is not punctual.
+    - unusal bus timings.
+    - bus delay.
+    - water is leaking from top of the bus.
+    
+
+- intent: lab_issue
+  examples: |
+    - The computer in lab not working properly.
+    - The mouse in the computer lab is not working.
+    - The monitor in the lab has display issues.
+    - The ethernet network in the lab is too poor.
+    - Lab equipment is outdated.
+    - Internet in computer is too slow.
+    - The computer in the lab is not functioning.
+    - Lab resources need an upgrade.
+    - The computer in the lab is infected with a virus.
+    - The keyboard in the computer lab is not functioning.
+    - Lab monitors are displaying distorted images.
+    - The lab is not equipped with the latest software.
+    - The ethernet connection in the lab is unreliable.
+    - Lab resources are in a state of disrepair.
+    - The chairs in the computer lab need repair.
+    - No power in the computer lab.
+    - The lab equipment is outdated and rusty.
+    - Lab equipment is not well-maintained.
+    - mouse, keyboard, monitor, cpu, headsetjack
+
+
+- intent: get_block_number
+  examples: |
+    - [block A](block)
+    - [block B](block)
+    - [block C](block)
+    - [block D](block)
+    - [block E](block)
+    - [block F](block)
+    - [block G](block)
+    - [A block](block)
+    - [B block](block)
+    - [C block](block)
+    - [D block](block)
+    - [E block](block)
+    - [F block](block)
+    - [G block](block)
+
+- intent: get_bus_number
+  examples: |
+    - [10A](bus_number)
+    - [10B](bus_number)
+    - [10C](bus_number)
+    - [9A](bus_number)
+    - [9B](bus_number)
+    - [8A](bus_number)
+    - [8B](bus_number)
+    - [7A](bus_number)
+    - [6A](bus_number)
+    - [6B](bus_number)
+    - [7B](bus_number)
+    - [6C](bus_number)
+
+- intent: get_lab_numberorname
+  examples: |
+    - [lab1](lab_info)
+    - [lab2](lab_info)
+    - [lab3](lab_info)
+    - [lab4](lab_info)
+    - [lab5](lab_info)
+    - [communication lab](lab_info)
+    - [IT project lab](lab_info)
+    - [CSE project lab](lab_info)
+    - [VLSI lab](lab_info)
+
+- intent: ask_blocks
+  examples: |
+    - How many blocks are in college
+    - what are the blocks in college
+    - show all the blocks in the college
+    - display the blocks
+    - give the block names 
+    - Can you list the blocks
+
+- intent: ask_labs
+  examples: |
+    - How many labs are in college
+    - what are the labs in college
+    - show all the labs in the college
+    - display the labs
+    - give the lab names 
+    - Can you list the labs

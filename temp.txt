@@ -1,0 +1,1609 @@
+actions:
+  - utter_greet
+  - utter_did_that_helpful
+  - utter_thank
+  - utter_ask_issue
+  - utter_electricity_issue
+  - utter_college_wifi_issue
+  - utter_food_hygiene_issue
+  - utter_drinking_water_issue
+  - utter_sanitary_issue
+  - utter_infrastructure_issue
+  - utter_transportation_issue
+  - utter_lab_issue
+  - utter_issue_will_resolve
+  - utter_ask_for_issue
+  - utter_od_details
+  - utter_leave_details
+  - utter_ask_labnumberorname
+  - utter_ask_busnumber
+  - utter_ask_blocknumber
+  - utter_iamabot
+  - utter_goodbye
+  - utter_default
+  utter_electricity_issue:
+  - text: "Your issue has been reported to college management." 
+
+  utter_college_wifi_issue:
+  - text: "Your issue has been reported to college management."
+
+
+  utter_drinking_water_issue:
+  - text: "Your issue has been reported to college management."
+
+  utter_sanitary_issue:
+  - text: "Your issue has been reported to college management."
+
+  utter_infrastructure_issue:
+  - text: "Your issue has been reported to college management."
+ 
+  utter_transportation_issue:
+  - text: "Your issue has been reported to college management."
+
+  utter_lab_issue:
+  - text: "Your issue has been reported to college management."
+  
+lookup_tables:
+tables:
+  block:
+- intent: leave_concerns
+  examples: |
+    - How can I apply for leave?
+    - I need some days off. What's the process for leave?
+    - Can you guide me on taking leave from college?
+    - What are the steps to get leave?
+    - I want to request leave. How do I do that?
+    - Is there a form for taking leave?
+    - How many days of leave can I apply for?
+    - What's the leave policy at the college?
+    - I need information on getting medical leave.
+    - Where can I find the leave application form?
+
+- intent: od_concerns 
+  examples: |
+    - How do I apply for On-Duty (OD)?
+    - Can you explain the process for getting OD for inter-college events?
+    - I want to participate in an inter-college event. How can I get OD?
+    - What's the procedure for applying OD for an event?
+    - Is there a specific form for OD for events?
+    - Where can I find the OD application form?
+    - Tell me more about the OD policy for college events.
+    - I need to attend a workshop. How can I get OD for that?
+    - Can you guide me on OD for attending a conference?
+    - A
+    - B
+    - C
+    - D
+    - E
+    - F
+    - G
+    - H
+
+  bus_number:
+    - 10A
+    - 10B
+    - 10C
+    - 9A
+    - 9B
+    - 8A
+    - 8B
+    - 7A
+    - 6A
+    - 6B
+    - 7B
+    - 6C
+
+  lab_info:
+    - lab1
+    - lab2
+    - lab3
+    - lab4
+    - lab5
+    - communication lab
+    - IT project lab
+    - CSE project lab
+    - VLSI lab
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - I am 
+
+- intent: start
+  examples: |
+    - /start
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ok
+    - kk
+    - good
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: thank
+  examples: |
+    - thank you
+    - thanks
+    - thanks a lot
+    - thank you so much
+    - appreciate it
+    - thanks a bunch
+    - thanks for your help
+    - thank you very much
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+    - what is your name
+
+- intent: time_require
+  examples: |
+    - how long will it take
+    - when it will resolve
+    - how many days will it take
+    - how many hours will it take
+    - how long I should wait for the resolution
+    - when will I get the result
+    - when?
+
+- intent: communicate_issue
+  examples: |
+    - I have an issue in the college
+    - I have an problem
+    - problem in college
+    - I want file a grievance
+    - I need to report a problem.
+    - There's something I want to bring to your attention.
+    - Can I talk to someone about an issue?
+    - I need help
+    - help me
+    - assist me
+    - I have a concern I'd like to discuss.
+    - Is there a way to report a problem?
+    - I want to inform an issue.
+    - Something is not right, and I need assistance.
+    - How do I report an issue?
+    - I'm experiencing a problem and need help.
+
+- intent: electricity_issue
+  examples: |
+    - There is no electricity in the hostel.
+    - Our classroom has no lights.
+    - The lecture hall is without electricity.
+    - Power failure in the hostel.
+    - The power went out in the middle of our class.
+    - Our dormitory is facing an electricity problem.
+    - No lights in the study area due to a power failure.
+    - The entire block is without electricity.
+
+- intent: college_wifi_issue
+  examples: |
+    - The college Wi-Fi is too slow .
+    - No proper internet connection in college Wi-Fi.
+    - The Wi-Fi speed is unbearable.
+    - Constant disconnection issues in college Wi-Fi.
+    - Unable to connect to the college network.
+    - Wi-Fi in the library is not working.
+    - The Wi-Fi connection is not stable in the library.
+    - College Wi-Fi is down again.
+    - The internet in the classroom is unreliable.
+    - Can't connect to the college network from my dorm.
+    - The Wi-Fi signal is weak in the common area.
+    - The Wi-Fi is not working in the auditorium.
+
+- intent: food_hygiene_issue
+  examples: |
+    - The food in the canteen was not cooked properly.
+    - Plates in the hostel mess were not cleaned.
+    - The food court is not properly maintained.
+    - Canteen hygiene is a concern.
+    - Found a hair in the meal.
+    - Food in the hostel was not up to the mark.
+    - The hygiene in the hostel mess is terrible.
+    - The food in the canteen is not fit for consumption.
+    - The food court is unclean and untidy.
+    - There's a foul smell in the dining area.
+    - Canteen tables are sticky and unclean.
+    - The quality of food in the hostel is poor.
+
+- intent: drinking_water_issue
+  examples: |
+    - No drinking water supply in our block.
+    - There are no tumblers in the drinking water area.
+    - The drinking water tap is not working.
+    - The water cooler in our floor is not functional.
+    - No clean glasses for drinking water.
+    - No water supply in the hostel.
+    - No water supply in the water cooler.
+    - The water from the drinking tap is undrinkable.
+    - Tumblers are missing from the drinking water area.
+    - The water dispenser is out of order.
+    - The drinking water area is unhygienic.
+    - No clean glasses for water in the hostel.
+
+- intent: sanitary_issue
+  examples: |
+    - The bathroom is not properly cleaned.
+    - The restroom has no water supply.
+    - Washroom hygiene is a problem.
+    - Toilet in our block is not working.
+    - Found no soap in the bathroom.
+    - Restroom cleanliness is poor.
+    - The bathroom is in a disgusting state.
+    - There's no soap in the restroom.
+    - The toilet in our block is overflowing.
+    - Washroom cleanliness is unacceptable.
+    - The restroom floor is wet and dirty.
+    - Found insects in the bathroom.
+    
+
+- intent: infrastructure_issue
+  examples: |
+    - The fan in the classroom is not working.
+    - The blackboard in the lecture hall is damaged.
+    - Broken board in our classroom.
+    - The fan is not working properly.
+    - The benches in the lecture hall are uncomfortable.
+    - The fan in the classroom makes a lot of noise.
+    - The whiteboard in the study room is damaged.
+    - classroom not cleaned
+    - The lights in the corridor are flickering.
+    - Projector in class not working
+    - switch issue
+    - fan issue
+    - window problem
+    - door not locking
+    - broken door
+    - window not sliding
+    - Tubelight not working
+    - broken desk
+    - chairs broken
+    - broken chair
+    - broken dustbin
+    - no sufficient desks and chairs
+    - less desks
+    - less number of desks and chairs
+    - smart board not working
+
+
+- intent: transportation_issue
+  examples: |
+    - The college bus did not arrive on time.
+    - The bus schedule is unreliable.
+    - The transportation service is inconsistent.
+    - Problems with the college bus service.
+    - The bus is frequently delayed.
+    - The college bus is always overcrowded.
+    - The bus did not show up at the designated stop.
+    - The bus arrived very late today.
+    - There's a problem with the route of the college bus.
+    - The bus broke down on the way to college.
+    - bus seats are broken.
+    - bus seats are torn.
+    - bus is not punctual.
+    - unusal bus timings.
+    - bus delay.
+    - water is leaking from top of the bus.
+    
+
+- intent: lab_issue
+  examples: |
+    - The computer in lab not working properly.
+    - The mouse in the computer lab is not working.
+    - The monitor in the lab has display issues.
+    - The ethernet network in the lab is too poor.
+    - Lab equipment is outdated.
+    - Internet in computer is too slow.
+    - The computer in the lab is not functioning.
+    - Lab resources need an upgrade.
+    - The computer in the lab is infected with a virus.
+    - The keyboard in the computer lab is not functioning.
+    - Lab monitors are displaying distorted images.
+    - The lab is not equipped with the latest software.
+    - The ethernet connection in the lab is unreliable.
+    - Lab resources are in a state of disrepair.
+    - The chairs in the computer lab need repair.
+    - No power in the computer lab.
+    - The lab equipment is outdated and rusty.
+    - Lab equipment is not well-maintained.
+    - mouse, keyboard, monitor, cpu, headsetjack
+
+
+- intent: get_block_number
+  examples: |
+    - [block A](block)
+    - [block B](block)
+    - [block C](block)
+    - [block D](block)
+    - [block E](block)
+    - [block F](block)
+    - [block G](block)
+    - [A block](block)
+    - [B block](block)
+    - [C block](block)
+    - [D block](block)
+    - [E block](block)
+    - [F block](block)
+    - [G block](block)
+
+- intent: get_bus_number
+  examples: |
+    - [10A](bus_number)
+    - [10B](bus_number)
+    - [10C](bus_number)
+    - [9A](bus_number)
+    - [9B](bus_number)
+    - [8A](bus_number)
+    - [8B](bus_number)
+    - [7A](bus_number)
+    - [6A](bus_number)
+    - [6B](bus_number)
+    - [7B](bus_number)
+    - [6C](bus_number)
+
+- intent: get_lab_numberorname
+  examples: |
+    - [lab1](lab_info)
+    - [lab2](lab_info)
+    - [lab3](lab_info)
+    - [lab4](lab_info)
+    - [lab5](lab_info)
+    - [communication lab](lab_info)
+    - [IT project lab](lab_info)
+    - [CSE project lab](lab_info)
+    - [VLSI lab](lab_info)
+
+- intent: ask_blocks
+  examples: |
+    - How many blocks are in college
+    - what are the blocks in college
+    - show all the blocks in the college
+    - display the blocks
+    - give the block names 
+    - Can you list the blocks
+
+- intent: ask_labs
+  examples: |
+    - How many labs are in college
+    - what are the labs in college
+    - show all the labs in the college
+    - display the labs
+    - give the lab names 
+    - Can you list the labs
+
+
+
+
+
+
+
+    - story: path for food_hygiene_issue 2
+  steps:
+  - intent: food_hygiene_issue
+  - action: utter_food_hygiene_issue
+  - action: utter_issue_will_resolve
+  - intent: thank
+  - action: utter_thank
+
+- story: path for drinking_water_issue 2
+  steps:
+  - intent: drinking_water_issue
+  - action: utter_ask_blocknumber
+  - intent: get_block_number
+    entities:
+    - block: "block A"
+    - block: "block B"
+    - block: "block C"
+    - block: "block D"
+    - block: "block E"
+    - block: "block F"
+    - block: "block G"
+  - action: action_get_block_number
+  - action: utter_issue_will_resolve
+  - intent: thank
+  - action: utter_thank
+
+- story: path for sanitary_issue 2
+  steps:
+  - intent: sanitary_issue
+  - action: utter_ask_blocknumber
+  - intent: get_block_number
+    entities:
+    - block: "block A"
+    - block: "block B"
+    - block: "block C"
+    - block: "block D"
+    - block: "block E"
+    - block: "block F"
+    - block: "block G"
+  - action: action_get_block_number
+  - action: utter_issue_will_resolve
+  - intent: thank
+  - action: utter_thank
+
+- story: path for infrastructure_issue 2
+  steps:
+  - intent: infrastructure_issue
+  - action: utter_ask_blocknumber
+  - intent: get_block_number
+    entities:
+    - block: "block A"
+    - block: "block B"
+    - block: "block C"
+    - block: "block D"
+    - block: "block E"
+    - block: "block F"
+    - block: "block G"
+  - action: action_get_block_number
+  - action: utter_issue_will_resolve
+  - intent: thank
+  - action: utter_thank
+
+- story: path for transportation_issue 2
+  steps:
+  - intent: transportation_issue
+  - action: utter_ask_busnumber
+  - intent: get_bus_number
+    entities:
+    - bus_number: "10A"
+    - bus_number: "10B"
+    - bus_number: "10C"
+    - bus_number: "9A"
+    - bus_number: "9B"
+    - bus_number: "8A"
+    - bus_number: "8B"
+    - bus_number: "7A"
+    - bus_number: "6A"
+    - bus_number: "6B"
+    - bus_number: "7B"
+    - bus_number: "6C"
+  - action: action_get_bus_number
+  - action: utter_issue_will_resolve
+  - intent: thank
+  - action: utter_thank
+  
+- story: path for lab_issue 2
+  steps:
+  - intent: lab_issue
+  - action: utter_ask_labnumberorname
+  - intent: get_lab_numberorname
+    entities:
+    - lab_info: "lab1"
+    - lab_info: "lab2"
+    - lab_info: "lab3"
+    - lab_info: "lab4"
+    - lab_info: "lab5"
+    - lab_info: "communication lab"
+    - lab_info: "IT project lab"
+    - lab_info: "CSE project lab"
+    - lab_info: "VLSI lab"
+  - action: action_get_lab_info
+  - action: utter_issue_will_resolve
+  - intent: thank
+  - action: utter_thank
+
+- story: Handle fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default_fallback
+
+
+    - The campus security barriers won't lift without power.
+    - The campus coffee shop is closed without electricity.
+    - We're unable to access the online library resources.
+    - The campus events are canceled due to the power failure.
+    - It's difficult to study in our rooms without desk lamps.
+    - The Wi-Fi in the cafeteria keeps disconnecting.
+    - There's no Wi-Fi signal in the student lounge.
+    - The campus Wi-Fi is unusable during peak hours.
+    - Can't access online lectures due to Wi-Fi problems.
+    - The Wi-Fi authentication page won't load.
+    - The Wi-Fi password keeps changing without notice.
+    - Our dormitory Wi-Fi is too slow to stream videos.
+    - The Wi-Fi in the gymnasium is unreliable.
+    - Can't download study materials due to Wi-Fi issues.
+    - The Wi-Fi connection drops every few minutes.
+    - The campus Wi-Fi restricts access to certain websites.
+    - There's no Wi-Fi coverage in the outdoor areas.
+    - The Wi-Fi signal is weak in the student dormitories.
+    - Can't complete online assignments due to Wi-Fi outages.
+    - The Wi-Fi login portal is not working properly.
+    - The Wi-Fi speed is insufficient for video conferencing.
+    - The campus Wi-Fi is not compatible with certain devices.
+    - Can't access online resources in the lab due to Wi-Fi problems.
+    - The Wi-Fi network is overloaded during exams.
+    - The Wi-Fi network is not secure, putting our data at risk.
+    - Can't submit assignments online due to Wi-Fi disruptions.
+    - The campus Wi-Fi requires frequent re-authentication.
+    - The Wi-Fi signal drops when moving between buildings.
+    - Can't access the online library database due to Wi-Fi issues.
+    - The Wi-Fi router in our dormitory is outdated.
+    - The campus Wi-Fi doesn't support VPN connections.
+    - Can't attend virtual lectures due to Wi-Fi downtime.
+    - The Wi-Fi coverage is patchy in the parking lot.
+    - Can't access the online learning platform due to Wi-Fi problems.
+    - The Wi-Fi network is congested with too many users.
+    - Can't connect to the campus Wi-Fi using my mobile device.
+    - The Wi-Fi speed is too slow for online gaming.
+    - The campus Wi-Fi blocks access to social media sites.
+    - Can't download software updates due to Wi-Fi limitations.
+    - The Wi-Fi network is not accessible from certain areas of campus.
+    - Can't access online course materials due to Wi-Fi outages.
+    - The campus Wi-Fi is not compatible with my device's operating system.
+    - Can't participate in virtual group projects due to Wi-Fi issues.
+    - The Wi-Fi signal is weak in the lecture halls.
+    - Can't access the campus Wi-Fi without a student ID.
+    - The Wi-Fi connection is disrupted by nearby electronic devices.
+    - Can't connect to the campus Wi-Fi using my gaming console.
+    - The Wi-Fi signal interferes with medical devices in the lab.
+    - Can't download lecture recordings due to Wi-Fi speed restrictions.
+    - The campus Wi-Fi blocks access to academic research websites.
+    - Can't access online tutorials due to Wi-Fi connectivity problems.
+    - The Wi-Fi network is not accessible from certain dormitory rooms.
+    - Can't access the campus Wi-Fi without installing proprietary software.
+    - The food court is not properly maintained.
+    - The food court is unclean and untidy.
+    - There's a foul smell in the food court.
+    - Canteen tables in the food court are sticky and unclean.
+    - There's mold on the bread served in the food court.
+    - There are cockroaches crawling around the food court.
+    - The food in the food court looks stale and old.
+    - The expiration dates on the packaged food in the food court are past due.
+    - There's a lack of handwashing facilities in the food court.
+    - I got food poisoning from the food served in the food court.
+    - There's no Wi-Fi signal in the food court.
+    - The cleanliness of the kitchen in the food court is subpar.
+    - I observed employees not washing their hands before handling food in the food court.
+    - There's a buildup of grease and grime on the stovetops in the food court.
+    - The ice machine in the food court is moldy and needs cleaning.
+    - The food in the food court lacks proper labeling for allergens and dietary restrictions.
+    - There's a shortage of napkins and paper towels in the food court.
+    - The food in the food court is often overpriced for the quality offered.
+    - The food in the food court is frequently served late, causing inconvenience.
+    - The food in the food court is often stale and unpalatable.
+    - I found foreign objects in my food at the food court.
+    - The food in the food court is greasy and oily.
+    - There's a lack of proper cleaning and sanitation practices in the kitchen of the food court.
+    - The food in the food court is bland and tasteless.
+    - The cleanliness of the serving counters in the food court is questionable.
+    - There's a lack of supervision in the kitchen of the food court, leading to unsafe food handling practices.
+    - I encountered uncooked food in the dishes served at the food court.
+    - The food in the food court is often served in dirty dishes.
+    - There's a lack of ventilation in the kitchen of the food court, leading to unpleasant odors.
+    - The food in the food court is frequently undercooked or overcooked.
+    - The food in the food court is often served in inadequate portions.
+    - The food in the food court is often served lukewarm.
+    - There's a lack of proper seating in the food court, leading to overcrowding.
+    - I found expired canned goods in the pantry of the food court.
+    - The food in the food court is repetitive and lacks variety.
+    - There's a lack of variety in the food options offered at the food court.
+    - The food in the food court is frequently left uncovered, attracting insects.
+    - I encountered moldy food in the refrigerator of the food court.
+    - The food in the food court is often served cold and unappetizing.
+    - There's a shortage of cleaning staff in the food court, leading to unclean conditions.
+    - I found expired dairy products in the refrigerator of the food court.
+    - The food in the food court is often overseasoned and salty.
+    - There's a lack of proper hygiene in the food preparation area of the food court.
+    - I observed cross-contamination in the food preparation area of the food court.
+    - The food in the food court is frequently prepared using outdated ingredients.
+    - There's a lack of pest control measures in the food court, leading to infestations.
+    - I encountered unappetizing odors emanating from the kitchen of the food court.
+    - The food in the food court is often served in unsanitary conditions.
+    - There's a lack of cleanliness in the food storage areas of the food court.
+    - I experienced nausea after consuming food from the food court.
+    - The food in the food court is often served late, causing inconvenience.
+    - The drinking water in our block tastes funny.
+    - There's a strange odor coming from the drinking water tap.
+    - The water cooler in our dormitory is leaking.
+    - The water from the drinking fountain is discolored.
+    - The drinking water area is infested with insects.
+    - The water dispenser in the common area is empty.
+    - The water pressure in the drinking fountain is too low.
+    - The drinking water in our hostel smells bad.
+    - There's a buildup of algae in the drinking water tap.
+    - The water cooler in the cafeteria is making strange noises.
+    - The drinking water area is always crowded and chaotic.
+    - The water from the drinking tap is cloudy and murky.
+    - The water cooler in our building is constantly breaking down.
+    - The drinking water area is poorly lit and difficult to access at night.
+    - The water dispenser in the gymnasium is out of service.
+    - The water from the drinking fountain tastes metallic.
+    - There's a shortage of cups for drinking water in the hostel.
+    - The water cooler in the study lounge is not cooling the water properly.
+    - The drinking water area is not wheelchair accessible.
+    - The water from the drinking tap has a strange texture.
+    - The water cooler in the hallway is dispensing warm water.
+    - The drinking water area is littered with trash and debris.
+    - The water dispenser in the recreation room is covered in mold.
+    - The water from the drinking fountain is lukewarm.
+    - There's a sewage odor coming from the drinking water tap.
+    - The water cooler in the lobby is leaking onto the floor.
+    - The drinking water area is poorly maintained and dirty.
+    - The water dispenser in the lounge is out of order.
+    - The water from the drinking tap is foamy and bubbly.
+    - There's a long line at the drinking water area during peak hours.
+    - The water cooler in the courtyard is infested with ants.
+    - The drinking water area is cramped and uncomfortable.
+    - The water dispenser in the common room is covered in rust.
+    - The water from the drinking fountain is warm and unpleasant.
+    - There's a foul taste in the water from the drinking tap.
+    - The water cooler in the kitchen is emitting a foul odor.
+    - The drinking water area is poorly ventilated and stuffy.
+    - The water dispenser in the lounge is not dispensing water properly.
+    - The water from the drinking tap is making people sick.
+    - There's a lack of signage directing students to the drinking water area.
+    - The water cooler in the hallway is not refilled regularly.
+    - The drinking water area is not cleaned regularly.
+    - The water dispenser in the common area is covered in grime.
+    - The water from the drinking fountain is contaminated with sediment.
+    - There's a malfunctioning sensor on the drinking water tap.
+    - The water cooler in the break room is emitting a strange odor.
+    - The drinking water area is prone to flooding during heavy rain.
+    - The water dispenser in the recreation area is leaking onto the floor.
+    - The water from the drinking tap has a foul odor.
+    - The classroom door is jammed shut.
+    - The door handle is broken and won't turn.
+    - The classroom door won't close properly.
+    - The door hinge is squeaking loudly.
+    - The door lock is stuck in the locked position.
+    - The door frame is cracked and unstable.
+    - The door knob is loose and wobbly.
+    - The classroom door won't stay open.
+    - The door is difficult to open due to friction.
+    - The door latch is misaligned and won't catch.
+    - The door is scraping against the floor when opened.
+    - The door is difficult to push/pull open.
+    - The door is stuck halfway and won't move.
+    - The classroom door won't lock securely.
+    - The door is swollen and won't fit properly in the frame.
+    - The door is difficult to close fully.
+    - The door is missing its handle.
+    - The door is hard to open due to rust.
+    - The door is off its hinges and leaning.
+    - The door is stuck in the closed position.
+    - The door won't latch shut.
+    - The door is missing its lock mechanism.
+    - The door is rattling in its frame.
+    - The door is difficult to open because it's warped.
+    - The door is sagging and won't close properly.
+    - The door is cracked and needs repair.
+    - The door is making a clicking noise when opened.
+    - The door is missing its weather stripping.
+    - The door is difficult to open due to swelling.
+    - The door is scraping against the door frame.
+    - The door is difficult to open because it's swollen.
+    - The door is difficult to open due to a broken spring.
+    - The door is off its track and won't slide properly.
+    - The door is difficult to open due to a broken hinge.
+    - The door is difficult to close due to a warped frame.
+    - The door is difficult to open due to a faulty latch.
+    - The door is difficult to close due to a broken latch.
+    - The door is difficult to open due to a damaged handle.
+    - The door is difficult to close due to a damaged handle.
+    - The door is difficult to open due to a damaged lock.
+    - The door is difficult to close due to a damaged lock.
+    - The door is difficult to open due to a misaligned frame.
+    - The door is difficult to close due to a misaligned frame.
+    - The door is difficult to open due to a misaligned hinge.
+    - The door is difficult to close due to a misaligned hinge.
+    - The door is difficult to open due to a damaged frame.
+    - The door is difficult to close due to a damaged frame.
+    - The door is difficult to open due to a damaged latch.
+    - The door is difficult to close due to a damaged latch.
+    - The classroom lights are flickering.
+    - The light bulbs in the classroom are dim.
+    - The overhead lights are not turning on.
+    - The classroom lights are too bright.
+    - The fluorescent lights are making a buzzing noise.
+    - The light fixtures are emitting a burning smell.
+    - The classroom is too dark due to faulty lights.
+    - The lights are strobing and causing discomfort.
+    - The classroom lights are not working at all.
+    - The light switches are not functioning.
+    - The emergency lights are not working.
+    - The lights are flickering intermittently.
+    - The classroom is poorly lit due to insufficient lighting.
+    - The lights are making a crackling sound.
+    - The light fixtures are hanging loose from the ceiling.
+    - The classroom lights are too harsh on the eyes.
+    - The lights are not evenly distributed in the classroom.
+    - The lights are creating glare on the whiteboard.
+    - The classroom lights are too dim for reading.
+    - The lights are making a humming noise.
+    - The light bulbs need to be replaced.
+    - The classroom lights are causing headaches.
+    - The lights are making a popping sound.
+    - The lights are attracting bugs into the classroom.
+    - The classroom lights are flickering on and off.
+    - The lights are not illuminating the entire classroom.
+    - The lights are emitting a buzzing sound.
+    - The light fixtures are emitting sparks.
+    - The classroom lights are too harsh on the eyes.
+    - The lights are casting shadows in the classroom.
+    - The lights are creating a distracting glare.
+    - The classroom lights are too dim for clear visibility.
+    - The lights are creating a strobe effect.
+    - The lights are producing a faint glow.
+    - The light fixtures are emitting a burning odor.
+    - The classroom lights are not energy-efficient.
+    - The lights are emitting a high-pitched whine.
+    - The lights are causing discomfort due to their brightness.
+    - The lights are causing eye strain.
+    - The lights are not adequately lighting up the classroom.
+    - The lights are causing a buzzing noise.
+    - The classroom lights are too harsh on the eyes.
+    - The lights are creating shadows on the walls.
+    - The lights are making a clicking sound.
+    - The lights are not turning off completely.
+    - The lights are flickering sporadically.
+    - The lights are not providing sufficient illumination.
+    - The lights are causing a buzzing noise.
+    - The lights are emitting a burning smell.
+    - The smartboard is not responding to touch.
+    - The projector in the smart classroom is blurry.
+    - The audio system in the smart classroom is not working.
+    - The smartboard is displaying an error message.
+    - The interactive pen for the smartboard is malfunctioning.
+    - The smartboard software is crashing frequently.
+    - The smartboard calibration is off.
+    - The projector screen is not retracting properly.
+    - The smartboard markers are dried out.
+    - The smartboard is frozen and unresponsive.
+    - The interactive features on the smartboard are not working.
+    - The smartboard is not displaying the correct image.
+    - The speakers in the smart classroom are crackling.
+    - The microphone in the smart classroom is not picking up sound.
+    - The document camera in the smart classroom is not functioning.
+    - The internet connection in the smart classroom is slow.
+    - The smartboard is not connecting to the computer.
+    - The smartboard software is outdated.
+    - The smartboard cables are tangled and messy.
+    - The smartboard is not projecting onto the screen.
+    - The smartboard calibration is inaccurate.
+    - The smartboard is displaying a blank screen.
+    - The smartboard remote control is missing.
+    - The smartboard is not recognizing input from the computer.
+    - The smartboard pen is not working properly.
+    - The projector in the smart classroom is overheating.
+    - The interactive features on the smartboard are glitchy.
+    - The smartboard is displaying a distorted image.
+    - The smartboard is not turning on.
+    - The smartboard buttons are unresponsive.
+    - The smartboard software is crashing repeatedly.
+    - The smartboard is displaying a blue screen.
+    - The smartboard is not displaying in full screen.
+    - The smartboard is not connecting to the internet.
+    - The smartboard is not displaying the correct resolution.
+    - The smartboard is not recognizing handwriting.
+    - The smartboard is not projecting onto the entire screen.
+    - The smartboard is not displaying images/videos properly.
+    - The smartboard is not responding to gestures.
+    - The smartboard is not displaying text clearly.
+    - The smartboard is not recognizing multiple touch inputs.
+    - The smartboard is not saving annotations properly.
+    - The smartboard is not displaying in color.
+    - The smartboard is not showing PowerPoint presentations.
+    - The smartboard is not connecting to external devices.
+    - The smartboard is not displaying PDF files.
+    - The smartboard is not saving changes made during the lesson.
+    - The smartboard is not responding to keyboard inputs.
+    - The smartboard is not displaying interactive websites.
+    - The smartboard is not displaying videos properly.
+    - The classroom dustbin is overflowing.
+    - The dustbin lid is broken and won't close.
+    - There are no dustbins in the classroom.
+    - The dustbin is emitting a foul odor.
+    - No dustbin in classroom
+    - The dustbin is damaged and needs replacement.
+    - The classroom dustbin is missing.
+    - The dustbin is infested with pests.
+    - The dustbin is not emptied regularly.
+    - The dustbin is too small and fills up quickly.
+    - The dustbin is leaking garbage juice.
+    - The dustbin is rusted and corroded.
+    - The dustbin is placed in an inconvenient location.
+    - The dustbin is attracting flies and insects.
+    - The dustbin is dented and deformed.
+    - The dustbin is cracked and needs repair.
+    - The dustbin is overflowing with paper waste.
+    - The dustbin is overflowing with food waste.
+    - The dustbin is overflowing with plastic waste.
+    - The dustbin is overflowing with organic waste.
+    - The dustbin is overflowing with recyclables.
+    - The dustbin is overflowing with non-recyclables.
+    - The dustbin is overflowing with general waste.
+    - The dustbin is overflowing with wrappers.
+    - The dustbin is overflowing with tissues.
+    - The dustbin is overflowing with bottles.
+    - The dustbin is overflowing with cans.
+    - The dustbin is overflowing with papers.
+    - The dustbin is overflowing with pens.
+    - The dustbin is overflowing with notebooks.
+    - The dustbin is overflowing with textbooks.
+    - The dustbin is overflowing with plastic bags.
+    - The dustbin is overflowing with plastic bottles.
+    - The dustbin is overflowing with food wrappers.
+    - The dustbin is overflowing with snack packets.
+    - The dustbin is overflowing with fruit peels.
+    - The dustbin is overflowing with vegetable peels.
+    - The dustbin is overflowing with lunch leftovers.
+    - The dustbin is overflowing with plastic cutlery.
+    - The dustbin is overflowing with disposable cups.
+    - The dustbin is overflowing with juice cartons.
+    - The dustbin is overflowing with empty containers.
+    - The dustbin is overflowing with used tissues.
+    - The dustbin is overflowing with used napkins.
+    - The dustbin is overflowing with used tissues.
+    - The dustbin is overflowing with used wipes.
+    - The dustbin is overflowing with used cotton buds.
+    - The dustbin is overflowing with used sanitary pads.
+    - The dustbin is overflowing with used diapers.
+    - The classroom window is stuck and won't open.
+    - The window latch is broken and won't close.
+    - The window is jammed shut.
+    - The window glass is cracked.
+    - The window frame is damaged.
+    - The window is leaking during rain.
+    - The window blinds are broken and won't close properly.
+    - The window is difficult to open/close.
+    - The window is letting in a draft.
+    - The window is letting in too much sunlight/glare.
+    - The window is letting in too much noise.
+    - The window screen is torn and needs replacement.
+    - The window is not properly sealed.
+    - The window handle is loose.
+    - The window hinges are rusty.
+    - The window is painted shut.
+    - The window is difficult to lock.
+    - The window glass is fogged or dirty.
+    - The window is not properly insulated.
+    - The window is letting in insects.
+    - The window is letting in dust.
+    - The window is letting in pollen.
+    - The window is letting in odors from outside.
+    - The window is not soundproof.
+    - The window is too difficult to open/close.
+    - The window is too difficult to lock/unlock.
+    - The window frame is warped.
+    - The window is too difficult to clean.
+    - The window is too difficult to maintain.
+    - The window is too difficult to adjust.
+    - The window is not providing enough ventilation.
+    - The window is not providing enough natural light.
+    - The window is too small for the classroom.
+    - The window is too large for the classroom.
+    - The window is obstructed by furniture.
+    - The window is obstructed by curtains/blinds.
+    - The window is obstructed by plants.
+    - The window is obstructed by decorations.
+    - The window is obstructed by posters.
+    - The window is obstructed by equipment.
+    - The window is obstructed by storage.
+    - The window is obstructed by screens.
+    - The window is obstructed by wiring.
+    - The window is obstructed by fixtures.
+    - The window is obstructed by signage.
+    - The window is obstructed by shelving.
+    - The window is obstructed by partitions.
+    - The window is obstructed by other structures.
+    - The window is obstructed by architectural features.
+    - The window is obstructed by building elements.
+    - The classroom floor is dirty and needs cleaning.
+    - The desks in the classroom are covered in dust.
+    - There are cobwebs in the corners of the classroom.
+    - The whiteboard in the classroom is stained and needs cleaning.
+    - There are fingerprints all over the windows in the classroom.
+    - The trash cans in the classroom are overflowing.
+    - There are food wrappers and crumbs on the floor.
+    - The classroom chairs are stained and need to be wiped down.
+    - The walls in the classroom are marked and need to be washed.
+    - There is a strange odor coming from the classroom.
+    - The classroom carpet is dirty and needs to be vacuumed.
+    - There are pencil shavings all over the floor.
+    - The classroom plants are wilting and need to be watered.
+    - There are papers scattered everywhere in the classroom.
+    - The classroom recycling bin is overflowing with paper.
+    - There are spills on the desks that need to be cleaned up.
+    - The classroom shelves are dusty and need to be wiped down.
+    - There are stains on the ceiling tiles in the classroom.
+    - The classroom door handles are sticky and need to be cleaned.
+    - The classroom windows are smeared and need to be washed.
+    - There are muddy footprints on the floor of the classroom.
+    - There are wrappers and trash under the desks in the classroom.
+    - The classroom blinds are dusty and need to be cleaned.
+    - There are dead insects on the window sills in the classroom.
+    - There are water stains on the walls in the classroom.
+    - The classroom lights are covered in dust and need to be cleaned.
+    - There are crumbs in the keyboard trays of the classroom computers.
+    - There are empty bottles and cans left behind in the classroom.
+    - The classroom bookshelves are disorganized and need to be straightened.
+    - There are smudges on the mirrors in the classroom.
+    - There are dirty tissues left on the desks in the classroom.
+    - The classroom clock is dusty and needs to be wiped down.
+    - There are scuff marks on the classroom floor that need to be cleaned.
+    - The classroom air vents are clogged with dust and need to be cleaned.
+    - There are stains on the curtains in the classroom.
+    - There are fingerprints on the light switches in the classroom.
+    - There are crumbs in the classroom keyboard trays.
+    - The classroom projector screen is dirty and needs to be cleaned.
+    - There are wrappers and trash left behind in the classroom.
+    - There are coffee stains on the classroom tables.
+    - The classroom chalkboard is covered in chalk dust and needs to be wiped down.
+    - There are spills on the classroom chairs that need to be cleaned.
+    - There are dirty dishes left behind in the classroom.
+    - The classroom walls are scuffed and need to be washed.
+    - There are stains on the classroom ceiling tiles.
+    - The classroom soap dispensers are empty and need to be refilled.
+    - There are dirty handprints on the walls of the classroom.
+    - The desk in front of me is wobbly.
+    - The bench I'm sitting on is broken.
+    - The chair at my desk has a broken leg.
+    - The table in the corner is chipped and damaged.
+    - The desk surface is scratched and marked.
+    - The bench I'm sitting on is uncomfortable.
+    - The chair is missing a backrest.
+    - The table is too small for the group activity.
+    - The desk drawer is stuck and won't open.
+    - The bench is too low for the desk.
+    - The chair is missing a seat cushion.
+    - The table is unstable and shakes when touched.
+    - The desk is too high for me to comfortably work at.
+    - The bench is too narrow to sit comfortably.
+    - The chair is missing a wheel and is difficult to move.
+    - The table is covered in graffiti.
+    - The desk is missing a leg and is tilted.
+    - The bench is damaged and has sharp edges.
+    - The chair is squeaky and noisy.
+    - The table is too large and takes up too much space.
+    - The desk is covered in gum and needs cleaning.
+    - The bench is old and worn out.
+    - The chair is too low and uncomfortable.
+    - The table is stained and needs cleaning.
+    - The desk is too small to fit all my books.
+    - The bench is too close to the wall.
+    - The chair is missing an armrest.
+    - The table is missing a leg and is lopsided.
+    - The desk is missing a drawer handle.
+    - The bench is unstable and rocks back and forth.
+    - The chair is too heavy to move easily.
+    - The table is too high for the chairs.
+    - The desk is covered in sticky residue.
+    - The bench is too high for the table.
+    - The chair is too wide for the desk.
+    - The table is scratched and needs repair.
+    - The desk is too low and causes back pain.
+    - The bench is too short for the desk.
+    - The chair is too tall for the desk.
+    - The table is missing a corner.
+    - The desk is chipped and splintered.
+    - The bench is missing a plank.
+    - The chair is broken and collapses when sat on.
+    - The table is old and needs to be replaced.
+    - The desk is too narrow to fit my books and laptop.
+    - The bench is too long for the table.
+    - The chair is too small and uncomfortable.
+    - The table is too heavy to move.
+    - The desk is too heavy to move.
+    - The bench is too heavy to move.
+    - The chair is too heavy to move.
+    - The table is too bulky and takes up too much space.
+    - The desk is too bulky and takes up too much space.
+    - The bench is too bulky and takes up too much space.
+    - The chair is too bulky and takes up too much space.
+    - The table is too light and tips over easily.
+    - The desk is too light and tips over easily.
+    - The bench is too light and tips over easily.
+    - The chair is too light and tips over easily.
+    - The table is too wide for the classroom.
+    - The desk is too wide for the classroom.
+    - The bench is too wide for the classroom.
+    - The chair is too wide for the classroom.
+    - The table is too narrow for the classroom.
+    - The desk is too narrow for the classroom.
+    - The bench is too narrow for the classroom.
+    - The chair is too narrow for the classroom.
+    - The table is too short for the classroom.
+    - The desk is too short for the classroom.
+    - The bench is too short for the classroom.
+    - The chair is too short for the classroom.
+    - The table is too tall for the classroom.
+    - The desk is too tall for the classroom.
+    - The bench is too tall for the classroom.
+    - The chair is too tall for the classroom.
+    - The table is too old and needs to be replaced.
+    - The desk is too old and needs to be replaced.
+    - The bench is too old and needs to be replaced.
+    - The chair is too old and needs to be replaced.
+    - The table is too new and needs to be replaced.
+    - The desk is too new and needs to be replaced.
+    - The bench is too new and needs to be replaced.
+    - The chair is too new and needs to be replaced.
+    - The table is too damaged and needs repair.
+    - The desk is too damaged and needs repair.
+    - The bench is too damaged and needs repair.
+    - The chair is too damaged and needs repair.
+    - The table is too dirty and needs cleaning.
+    - The desk is too dirty and needs cleaning.
+    - The bench is too dirty and needs cleaning.
+    - The chair is too dirty and needs cleaning.
+    - The table is too dusty and needs cleaning.
+    - The desk is too dusty and needs cleaning.
+    - The bench is too dusty and needs cleaning.
+    - The chair is too dusty and needs cleaning.
+    - The table is too cluttered and needs to be cleared.
+    - The desk is too cluttered and needs to be cleared.
+    - The bench is too cluttered and needs to be cleared.
+    - The chair is too cluttered and needs to be cleared.
+    - The table is too messy and needs to be tidied.
+    - The desk is too messy and needs to be tidied.
+    - The bench is too messy and needs to be tidied.
+    - The chair is too messy and needs to be tidied.
+    - The table is too crowded and needs to be rearranged.
+    - The desk is too crowded and needs to be rearranged.
+    - The bench is too crowded and needs to be rearranged.
+    - The chair is too crowded and needs to be rearranged.
+    - The table is too bare and needs to be decorated.
+    - The desk is too bare and needs to be decorated.
+    - The bench is too bare and needs to be decorated.
+    - The chair is too bare and needs to be decorated.
+    - The table is too noisy and needs to be quieted.
+    - The desk is too noisy and needs to be quieted.
+    - The bench is too noisy and needs to be quieted.
+    - The chair is too noisy and needs to be quieted.
+    - The table is too quiet and needs to be livened up.
+    - The desk is too quiet and needs to be livened up.
+    - The bench is too quiet and needs to be livened up.
+    - The chair is too quiet and needs to be livened up.
+    - The table is too plain and needs to be decorated.
+    - The desk is too plain and needs to be decorated.
+    - The bench is too plain and needs to be decorated.
+    - The chair is too plain and needs to be decorated.
+    - The teacher arrives late to class frequently.
+    - The teacher often cancels classes without prior notice.
+    - The teacher doesn't provide clear explanations during lectures.
+    - The teacher doesn't engage with students during class discussions.
+    - The teacher is unresponsive to students' questions.
+    - The teacher doesn't provide enough feedback on assignments.
+    - The teacher's grading criteria seem arbitrary.
+    - The teacher assigns too much homework.
+    - The teacher's lectures are monotonous and uninspiring.
+    - The teacher doesn't use diverse teaching methods.
+    - The teacher shows favoritism towards certain students.
+    - The teacher doesn't respect students' opinions.
+    - The teacher lacks subject knowledge.
+    - The teacher is unapproachable and intimidating.
+    - The teacher doesn't encourage class participation.
+    - The teacher doesn't adapt teaching materials to students' needs.
+    - The teacher doesn't provide additional resources for students.
+    - The teacher's teaching style doesn't cater to different learning styles.
+    - The teacher doesn't address students' concerns effectively.
+    - The teacher doesn't explain assignments clearly.
+    - The teacher doesn't maintain a structured class environment.
+    - The teacher doesn't use technology effectively in teaching.
+    - The teacher's grading system seems unfair.
+    - The teacher doesn't motivate students to excel.
+    - The teacher doesn't provide real-world examples in lectures.
+    - The teacher's communication with students is poor.
+    - The teacher's expectations are unclear.
+    - The teacher doesn't encourage critical thinking.
+    - The teacher doesn't provide enough office hours for student consultation.
+    - The teacher doesn't follow the syllabus consistently.
+    - The teacher doesn't accommodate students with learning disabilities.
+    - The teacher doesn't respect students' time by keeping classes beyond scheduled hours.
+    - The teacher's feedback on assignments is vague.
+    - The teacher doesn't foster a collaborative learning environment.
+    - The teacher's lectures lack enthusiasm.
+    - The teacher doesn't challenge students enough.
+    - The teacher doesn't provide opportunities for hands-on learning.
+    - The teacher's exams don't align with class material.
+    - The teacher's lectures are disorganized.
+    - The teacher doesn't address disruptive behavior in the classroom.
+    - The teacher doesn't provide enough examples to clarify concepts.
+    - The teacher doesn't encourage independent research.
+    - The teacher's grading seems subjective.
+    - The teacher doesn't utilize guest speakers or experts in the field.
+    - The teacher doesn't incorporate current events into lessons.
+    - The teacher's assignments seem disconnected from course objectives.
+    - The teacher doesn't provide timely feedback on exams.
+    - The teacher's teaching pace is too fast for some students.
+    - The teacher doesn't offer opportunities for extra credit.
+    - The teacher doesn't facilitate group work effectively.
+    - The teacher doesn't create a welcoming classroom environment.
+    - The teacher's lectures are difficult to follow.
+    - The teacher doesn't provide enough resources for self-study.
+    - The teacher doesn't encourage students to ask questions.
+    - The teacher's instructions for assignments are unclear.
+    - The teacher doesn't address cultural diversity in the curriculum.
+    - The teacher's assignments are repetitive and uninteresting.
+    - The teacher doesn't provide enough practical applications of concepts.
+    - The teacher doesn't encourage creativity in assignments.
+    - The teacher's lectures lack relevance to real-world scenarios.
+    - The teacher doesn't give enough time for students to process information.
+    - The teacher's grading rubrics are inconsistent.
+    - The teacher doesn't encourage students to think critically.
+    - The teacher's grading policies are too strict.
+    - The teacher doesn't communicate grading expectations clearly.
+    - The teacher doesn't use student feedback to improve teaching methods.
+    - The teacher doesn't accommodate different learning styles.
+    - The teacher doesn't provide enough resources for exam preparation.
+    - The teacher's lectures are too theoretical and lack practical application.
+    - The teacher doesn't facilitate discussions effectively.
+    - The teacher doesn't provide opportunities for peer review.
+    - The teacher's assignments are too time-consuming.
+    - The teacher doesn't provide enough opportunities for skill development.
+    - The teacher doesn't foster a positive learning environment.
+    - The teacher's lectures are too fast-paced.
+    - The teacher doesn't allow students to express opinions freely.
+    - The teacher's lectures are too repetitive.
+    - The teacher doesn't acknowledge students' achievements.
+    - The teacher doesn't encourage collaboration among students.
+    - The teacher doesn't provide enough background information for topics.
+    - The teacher's explanations are too complex for students to understand.
+    - The teacher doesn't use multimedia effectively in teaching.
+    - The teacher's assignments are not aligned with learning objectives.
+    - The teacher doesn't provide enough opportunities for hands-on learning.
+    - The teacher's lectures lack engagement.
+    - The teacher doesn't incorporate enough interactive activities in lessons.
+    - The teacher doesn't provide opportunities for self-assessment.
+    - The teacher doesn't use varied assessment methods.
+    - The teacher's lectures lack practical examples.
+    - The teacher doesn't use inclusive language in class discussions.
+    - The teacher's grading is inconsistent across assignments.
+    - The teacher doesn't provide enough scaffolding for difficult concepts.
+    - The teacher's lectures are too theoretical and lack application.
+    - The teacher doesn't encourage students to explore beyond the curriculum.
+    - The teacher doesn't provide enough opportunities for reflection.
+    - The teacher's lectures are too focused on memorization.
+    - The teacher doesn't foster a sense of community in the classroom.
+    - The teacher doesn't provide opportunities for interdisciplinary learning.
+    - The teacher's lectures lack depth and detail.
+    - The teacher doesn't provide enough context for historical events.
+    - The teacher's feedback on assignments is too vague.
+    - The teacher doesn't provide enough opportunities for peer collaboration.
+    - The teacher doesn't integrate technology into lessons effectively.
+    - The teacher's lectures lack enthusiasm and energy.
+    - The teacher doesn't provide enough opportunities for student feedback.
+    - The teacher's teaching style is too rigid.
+    - The teacher doesn't provide enough examples to illustrate concepts.
+    - The teacher doesn't encourage students to think critically about course material.
+    - The teacher's grading is too harsh.
+    - The teacher doesn't provide enough opportunities for student engagement.
+    - The teacher doesn't accommodate students' diverse backgrounds and experiences.
+    - The teacher's lectures lack structure and coherence.
+    - The teacher doesn't provide enough opportunities for reflection on learning.
+    - The teacher doesn't provide enough opportunities for students to apply knowledge.
+    - The teacher's lectures are too monotonous and boring.
+    - The teacher doesn't provide enough opportunities for self-directed learning.
+    - The teacher's lectures lack real-world examples.
+    - The teacher doesn't provide enough opportunities for discussion.
+    - The teacher's lectures are too focused on rote memorization.
+    - The teacher doesn't provide enough opportunities for peer interaction.
+    - The teacher's feedback on assignments is too negative.
+    - The teacher doesn't provide enough opportunities for students to explore personal interests.
+    - The teacher's lectures lack relevance to students' lives.
+    - The teacher doesn't provide enough opportunities for students to practice skills.
+    - The teacher's lectures are too fast-paced for some students to keep up.
+    - The teacher doesn't provide enough opportunities for group work.
+    - The teacher's grading criteria are unclear.
+    - The teacher doesn't provide enough opportunities for students to ask questions.
+    - The teacher's lectures lack clarity and coherence.
+    - The teacher doesn't provide enough opportunities for students to apply critical thinking skills.
+    - The teacher's lectures lack engagement and interactivity.
+    - The teacher doesn't provide enough opportunities for students to express creativity.
+    - The teacher's grading is inconsistent with students' efforts.
+    - The teacher doesn't provide enough opportunities for students to collaborate.
+    - The teacher's lectures lack enthusiasm and passion for the subject.
+    - The teacher doesn't provide enough opportunities for students to work independently.
+    - The teacher's lectures lack differentiation for students with different learning needs.
+    - The teacher doesn't provide enough opportunities for students to develop communication skills.
+    - The teacher's lectures lack connections to real-world applications.
+    - The teacher doesn't provide enough opportunities for students to engage in inquiry-based learning.
+    - The teacher's lectures lack opportunities for students to develop problem-solving skills.
+    - The teacher's lectures lack opportunities for students to develop research skills.
+    - The teacher's lectures lack opportunities for students to develop collaboration skills.
+    - The teacher's lectures lack opportunities for students to develop leadership skills.
+    - The teacher's lectures lack opportunities for students to develop creativity skills.
+    - The teacher's lectures lack opportunities for students to develop critical thinking skills.
+    - The teacher's lectures lack opportunities for students to develop empathy skills.
+    - The teacher's lectures lack opportunities for students to develop resilience skills.
+    - The teacher's lectures lack opportunities for students to develop self-regulation skills.
+    - The teacher's lectures lack opportunities for students to develop adaptability skills.
+    - The teacher's lectures lack opportunities for students to develop problem-solving skills.
+    - The teacher's lectures lack opportunities for students to develop communication skills.
+    - The teacher's lectures lack opportunities for students to develop collaboration skills.
+    - The teacher's lectures lack opportunities for students to develop leadership skills.
+    - The teacher's lectures lack opportunities for students to develop creativity skills.
+    - The teacher's lectures lack opportunities for students to develop critical thinking skills.
+    - The teacher's lectures lack opportunities for students to develop empathy skills.
+    - The teacher's lectures lack opportunities for students to develop resilience skills.
+    - The teacher's lectures lack opportunities for students to develop self-regulation skills.
+    - The teacher's lectures lack opportunities for students to develop adaptability skills.
+    - The teacher's lectures lack opportunities for students to develop problem-solving skills.
+    - The teacher's lectures lack opportunities for students to develop communication skills.
+    - The teacher's lectures lack opportunities for students to develop collaboration skills.
+    - The teacher's lectures lack opportunities for students to develop leadership skills.
+    - The teacher's lectures lack opportunities for students to develop creativity skills.
+    - The teacher's lectures lack opportunities for students to develop critical thinking skills.
+    - The teacher's lectures lack opportunities for students to develop empathy skills.
+    - The teacher's lectures lack opportunities for students to develop resilience skills.
+    - The teacher's lectures lack opportunities for students to develop self-regulation skills.
+    - The teacher's lectures lack opportunities for students to develop adaptability skills.
+    - The fan in my room is not working.
+    - The ceiling fan is making strange noises.
+    - The fan blades are not spinning properly.
+    - There's a burning smell coming from the fan.
+    - The fan switch is broken.
+    - The fan speed is too slow.
+    - The fan is wobbling excessively.
+    - The fan remote control is not responding.
+    - The fan is not circulating air effectively.
+    - The fan is not cooling the room.
+    - The fan is making a clicking sound.
+    - The fan motor is overheating.
+    - The fan is emitting sparks.
+    - The fan is vibrating excessively.
+    - The fan blades are bent.
+    - The fan light is flickering.
+    - The fan chain is stuck.
+    - The fan is not installed properly.
+    - The fan is emitting a burning odor.
+    - The fan capacitor is faulty.
+    - The fan is making a grinding noise.
+    - The fan is emitting smoke.
+    - The fan is not turning on.
+    - The fan is making a humming noise.
+    - The fan is not balanced.
+    - The fan blades are chipped.
+    - The fan is making a rattling noise.
+    - The fan is not oscillating.
+    - The fan motor is making a buzzing noise.
+    - The fan is not blowing air evenly.
+    - The fan is shaking.
+    - The fan is not reversible.
+    - The fan light is not working.
+    - The fan blades are loose.
+    - The fan is making a squeaking noise.
+    - The fan is not adjustable.
+    - The fan is emitting a burning smell.
+    - The fan is not retracting properly.
+    - The fan is not stable.
+    - The fan is making a whirring noise.
+    - The fan is not rotating.
+    - The fan blades are damaged.
+    - The fan is not responding to the remote.
+    - The fan is making a clanking noise.
+    - The fan is not working on all speeds.
+    - The fan is making a screeching noise.
+    - The fan is not turning off.
+    - The fan is making a thumping noise.
+    - The fan is not blowing air smoothly.
+    - The bathroom stalls are missing toilet paper.
+    - There's a foul odor coming from the restroom.
+    - The toilet seat in our dormitory is broken.
+    - The sink in the bathroom is clogged.
+    - The restroom mirrors are dirty and smudged.
+    - There's no hand sanitizer in the bathroom.
+    - The restroom hand dryers are not working.
+    - The bathroom trash bins are overflowing.
+    - There's a leak in the ceiling of the restroom.
+    - The restroom door locks are broken.
+    - The bathroom lights flicker on and off.
+    - There's graffiti on the restroom walls.
+    - The restroom air freshener is empty.
+    - There's a strange noise coming from the restroom pipes.
+    - The bathroom faucets are leaking.
+    - The restroom ventilation is inadequate.
+    - There's a shortage of toilet stalls in the bathroom.
+    - The restroom is dimly lit and difficult to navigate.
+    - The bathroom stall doors are missing locks.
+    - There's a shortage of toilet brushes in the restroom.
+    - The restroom handrails are loose and unsafe.
+    - The bathroom floor tiles are cracked and slippery.
+    - There's no toilet seat covers in the restroom.
+    - The restroom ceiling tiles are water damaged.
+    - The bathroom soap dispensers are empty.
+    - There's a foul smell coming from the bathroom drains.
+    - The restroom paper towel dispensers are broken.
+    - There's mold growing on the restroom walls.
+    - The bathroom exhaust fans are not functioning.
+    - There's no hot water in the restroom sinks.
+    - The restroom partitions are poorly maintained and rusted.
+    - The bathroom floor is littered with trash.
+    - There's a lack of privacy in the restroom.
+    - The restroom door hinges are squeaky and need oiling.
+    - There's no toilet seat in one of the bathroom stalls.
+    - The bathroom floor is flooded with water.
+    - There's a buildup of grime in the bathroom grout lines.
+    - The restroom handwashing signs are faded and illegible.
+    - There's a foul odor coming from the bathroom drains.
+    - The restroom air vents are covered in dust and debris.
+    - There's no toilet brush in the restroom.
+    - The bathroom mirrors are cracked and need replacing.
+    - There's a shortage of toilet paper in the restroom.
+    - The restroom is infested with flies and other insects.
+    - The bathroom door is difficult to open and close.
+    - There's no trash bin in the restroom.
+    - The restroom is poorly ventilated and stuffy.
+    - There's a broken tile in the middle of the restroom floor.
+    - There's a leak in the roof of the building.
+    - The air conditioning in the building is not working.
+    - There's a strange smell coming from the ventilation system.
+    - The elevator in the building is out of order.
+    - The building has poor lighting in the corridors.
+    - There's a pest infestation in the building.
+    - The windows in the building are drafty.
+    - The building has inadequate heating during winter.
+    - There's a mold problem in the building.
+    - The building has cracked walls and ceilings.
+    - The building has poor soundproofing between rooms.
+    - The building lacks proper fire safety equipment.
+    - There's a sewage backup in the building.
+    - The building has outdated electrical wiring.
+    - There's a broken pipe flooding one of the rooms.
+    - The building has insufficient parking space.
+    - The building's security system is malfunctioning.
+    - There's graffiti on the walls of the building.
+    - The building has broken or missing door handles.
+    - There's a broken glass panel in one of the doors.
+    - The building has an issue with dampness and humidity.
+    - There's a problem with the building's foundation.
+    - The building has poor wheelchair accessibility.
+    - There's a malfunctioning alarm system in the building.
+    - The building has a problem with overcrowded common areas.
+    - There's a problem with the building's water pressure.
+    - The building's emergency exits are blocked.
+    - There's vandalism in the building's restrooms.
+    - The building has inadequate natural lighting.
+    - There's a problem with the building's Wi-Fi connectivity.
+    - The building's exterior needs repairs and painting.
+    - There's a problem with the building's insulation.
+    - The building's staircase railing is loose.
+    - There's a broken window on one of the upper floors.
+    - The building has a problem with frequent power outages.
+    - There's a problem with the building's garbage disposal system.
+    - The building has a problem with broken or missing tiles.
+    - There's a problem with the building's emergency lighting.
+    - The building has inadequate signage for navigation.
+    - There's a problem with the building's ventilation system.
+    - The building has a problem with leaking faucets and toilets.
+    - There's a problem with the building's security cameras.
+    - The building has a problem with malfunctioning door locks.
+    - There's a problem with the building's fire alarm system.
+    - The building has a problem with broken or damaged furniture.
+    - There's a problem with the building's pest control measures.
+    - The building has a problem with broken or missing ceiling tiles.
+    - There's a problem with the building's emergency generator.
+    - The building has a problem with inadequate janitorial services.
+    - There's a problem with the building's exterior lighting.
+    - The building has a problem with malfunctioning elevators.
+    - There's a problem with the building's access control system.
+    - The building has a problem with overflowing trash bins.
+    - There's a problem with the building's damaged flooring.
+    - The building has a problem with broken or malfunctioning HVAC units.
+    - There's a problem with the building's damaged window screens.
+    - The building has a problem with insufficient restroom facilities.
+    - There's a problem with the building's damaged exterior walls.
+    - The building has a problem with insufficient seating in common areas.
+    - There's a problem with the building's malfunctioning fire sprinklers.
+    - The building has a problem with broken or malfunctioning door hinges.
+    - There's a problem with the building's damaged or missing signage.
+    - The building has a problem with malfunctioning security gates.
+    - There's a problem with the building's damaged or missing roof tiles.
+    - The building has a problem with inadequate handrails on staircases.
+    - There's a problem with the building's damaged or missing wall insulation.
+    - The building has a problem with malfunctioning sump pumps in the basement.
+    - There's a problem with the building's damaged or missing floor coverings.
+    - The building has a problem with inadequate lighting in stairwells.
+    - There's a problem with the building's damaged or missing window blinds.
+    - The building has a problem with malfunctioning intercom systems.
+    - There's a problem with the building's damaged or missing fire extinguishers.
+    - The building has a problem with inadequate trash disposal facilities.
+    - There's a problem with the building's damaged or missing hand dryers in restrooms.
+    - The building has a problem with malfunctioning security barriers at entrances.
+    - There's a problem with the building's damaged or missing emergency exit signs.
+    - The building has a problem with inadequate bike storage facilities.
+    - There's a problem with the building's damaged or missing safety mirrors in corridors.
+    - The building has a problem with malfunctioning card readers at access points.
+    - There's a problem with the building's damaged or missing playground equipment.
+    - The building has a problem with inadequate storage space for residents.
+    - There's a problem with the building's damaged or missing fencing around the property.
+    - The building has a problem with malfunctioning entry gates for vehicles.
+    - There's a problem with the building's damaged or missing fire hoses.
+    - The building has a problem with inadequate lighting in parking areas.
+    - There's a problem with the building's damaged or missing security bollards.
+    - The building has a problem with malfunctioning security alarms.
+    - There's a problem with the building's damaged or missing mailboxes for residents.
+    - The building has a problem with inadequate visitor parking spaces.
+    - There's a problem with the building's damaged or missing emergency call boxes.
+    - The building has a problem with malfunctioning security lighting.
+    - There's a problem with the building's damaged or missing mailroom equipment.
+    - The building has a problem with inadequate storage space for bicycles.
+    - There's a problem with the building's damaged or missing fire hydrants.
+    - The building has a problem with malfunctioning security gates at exits.
+    - There's a problem with the building's damaged or missing fire alarms.
+    - The light switch in my room is not working.
+    - There's a problem with the switch for the overhead fan.
+    - The switch for the bathroom light is malfunctioning.
+    - The switch for the classroom projector isn't functioning.
+    - The switch for the hallway lights is broken.
+    - There's an issue with the switch for the kitchen stove.
+    - The switch for the air conditioner is not responding.
+    - The switch for the water heater is not turning on.
+    - The switch for the office printer is stuck.
+    - The switch for the outdoor lights is faulty.
+    - There's a problem with the switch for the coffee machine.
+    - The switch for the classroom computer isn't working.
+    - The switch for the garage door opener is not functioning.
+    - The switch for the classroom whiteboard markers is broken.
+    - There's an issue with the switch for the classroom projector screen.
+    - The switch for the classroom blinds is not operating.
+    - The switch for the classroom air purifier is malfunctioning.
+    - The switch for the classroom sound system isn't responding.
+    - There's a problem with the switch for the classroom heating system.
+    - The switch for the classroom TV monitor is not working.
+    - The switch for the classroom emergency lights is faulty.
+    - There's an issue with the switch for the classroom overhead projector.
+    - The switch for the classroom interactive whiteboard isn't functioning.
+    - The switch for the classroom speaker system is malfunctioning.
+    - There's a problem with the switch for the classroom smart lighting system.
+    - The switch for the classroom window blinds is not operating.
+    - The switch for the classroom air conditioning unit is broken.
+    - There's an issue with the switch for the classroom document camera.
+    - The switch for the classroom digital thermostat is not responding.
+    - The switch for the classroom ceiling fan is malfunctioning.
+    - There's a problem with the switch for the classroom video conferencing system.
+    - The switch for the classroom audio recording device isn't functioning.
+    - The switch for the classroom motion sensor lights is broken.
+    - There's an issue with the switch for the classroom electronic door lock.
+    - The switch for the classroom projector remote control is not working.
+    - The switch for the classroom smart board is malfunctioning.
+    - There's a problem with the switch for the classroom electronic window shades.
+    - The switch for the classroom power outlets is not functioning.
+    - The switch for the classroom digital display panel is malfunctioning.
+    - There's an issue with the switch for the classroom air quality monitor.
+    - The switch for the classroom security camera system isn't responding.
+    - The switch for the classroom digital clock is broken.
+    - There's a problem with the switch for the classroom temperature control unit.
+    - The switch for the classroom electronic door lock is not working.
+    - The switch for the classroom Wi-Fi router is malfunctioning.
+    - There's an issue with the switch for the classroom speaker system.
+    - The switch for the classroom desktop computer is not responding.
+    - The switch for the classroom audio system is malfunctioning.
+    - There's a problem with the switch for the classroom video projector.
+    - The switch for the classroom electronic whiteboard is not working.
+    - The switch for the classroom digital display is malfunctioning.
+    - There's an issue with the switch for the classroom lighting system.
+    - The switch for the classroom multimedia equipment is not responding.
+    - The switch for the classroom temperature control system is malfunctioning.
+    - There's a problem with the switch for the classroom sound amplifier.
+    - The switch for the classroom computer network is not working.
+    - The switch for the classroom media player is malfunctioning.
+    - There's an issue with the switch for the classroom digital signage.
+    - The switch for the classroom projector screen is not responding.
+    - The switch for the classroom projector remote is malfunctioning.
+    - There's a problem with the switch for the classroom presentation system.
+    - The switch for the classroom lighting control panel is not working.
+    - The switch for the classroom audio mixer is malfunctioning.
+    - There's an issue with the switch for the classroom video display.
+    - The switch for the classroom video switcher is not responding.
+    - The switch for the classroom audiovisual equipment is malfunctioning.
+    - There's a problem with the switch for the classroom video distribution system.
+    - The switch for the classroom audiovisual control system is not working.
+    - The switch for the classroom audiovisual presentation system is malfunctioning.
+    - There's an issue with the switch for the classroom audiovisual distribution system.
+    - The switch for the classroom audiovisual switching system is not responding.
+    - The switch for the classroom audiovisual routing system is malfunctioning.
+    - There's a problem with the switch for the classroom audiovisual integration system.
+    - The switch for the classroom audiovisual management system is not working.
+    - The switch for the classroom audiovisual automation system is malfunctioning.
+    - There's an issue with the switch for the classroom audiovisual synchronization system.
+    - The switch for the classroom audiovisual synchronization system is not responding.
+    - The switch for the classroom audiovisual synchronization system is malfunctioning.
+    - There's a problem with the switch for the classroom audiovisual synchronization system.
+    - The switch for the classroom audiovisual synchronization system is not working.
+    - The switch for the classroom audiovisual synchronization system is malfunctioning.
+    - There's an issue with the switch for the classroom audiovisual synchronization system.
+    - The switch for the classroom audiovisual synchronization system is not responding.
+    - The fan in the classroom is not working.
+    - The blackboard in the lecture hall is damaged.
+    - Broken board in our classroom.
+    - The fan is not working properly.
+    - The benches in the lecture hall are uncomfortable.
+    - The fan in the classroom makes a lot of noise.
+    - The whiteboard in the study room is damaged.
+    - classroom not cleaned
+    - The lights in the corridor are flickering.
+    - Projector in class not working
+    - switch issue
+    - fan issue
+    - window problem
+    - door not locking
+    - broken door
+    - window not sliding
+    - Tubelight not working
+    - broken desk
+    - chairs broken
+    - broken chair
+    - broken dustbin
+    - no sufficient desks and chairs
+    - less desks
+    - less number of desks and chairs
+    - smart board not working

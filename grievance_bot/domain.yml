@@ -1,0 +1,131 @@
+version: "3.1"
+
+entities:
+  - block
+  - lab_info
+  - bus_number
+
+slots:
+  block:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: block
+
+  lab_info:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: lab_info
+
+  bus_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: bus_number
+
+intents:
+  - greet
+  - start
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - thank
+  - time_require
+  - communicate_issue
+  - electricity_issue
+  - college_wifi_issue
+  - food_hygiene_issue
+  - drinking_water_issue
+  - sanitary_issue
+  - infrastructure_issue
+  - transportation_issue
+  - lab_issue
+  - get_block_number
+  - get_bus_number
+  - get_lab_numberorname
+  - nlu_fallback
+  - ask_blocks
+  - ask_labs
+
+
+responses:
+
+  utter_start:
+  - text: "Hi there!!!"
+
+  utter_greet:
+  - text: "Hello! How can I assist you today?"
+
+  utter_thank:
+  - text: "Thank You, Have a great day!!!"
+
+  utter_ask_issue:
+  - text: "Tell me the issue or problem you're facing"
+
+  utter_food_hygiene_issue:
+  - text: "Your issue has been reported to college management."
+
+  utter_issue_will_resolve:
+  - text: "your issue will resolve as soon as possible."
+
+  utter_ask_for_issue:
+  - text: "Don't worry, if you have any queries or issues , feel free to ask"
+
+  utter_ask_labnumberorname:
+  - text: "In which lab are you facing this issue?(i.e lab number or lab name)"
+
+  utter_ask_busnumber:
+  - text: "Please provide the bus number where you facing the issue"
+
+  utter_ask_blocknumber:
+  - text: "In which block are you facing this issue?"
+
+  utter_iamabot:
+  - text: "I am CampusHelpHub, a chatbot designed to address and resolve your concerns."
+
+  utter_goodbye:
+  - text: "Good bye..."
+
+  utter_default_fallback:
+  - text: "I'm sorry, I didn't understand that. Can you please rephrase?"
+
+  utter_time_require:
+  - text: "It will resolve within 24 hours"
+
+  utter_ok:
+  - text: "That's great"
+
+  utter_show_blocks:
+  - text: "1. block B
+    2. block C
+    3. block D
+    4. block E
+    5. block F
+    6. block G
+    7. block H"
+
+  utter_show_labs:
+  - text: "lab1
+    lab2
+    lab3
+    lab4
+    lab5
+    communication lab
+    IT project lab
+    CSE project lab
+    VLSI lab
+    "
+
+actions:
+  - action_get_lab_info
+  - action_get_bus_number
+  - action_get_block_number
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

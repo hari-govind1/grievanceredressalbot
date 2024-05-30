@@ -1,0 +1,48 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: ask for issue whenever user try to report an issue
+  steps:
+  - intent: communicate_issue
+  - action: utter_ask_issue
+
+- rule: tell the time whenever user ask for the time will taken
+  steps:
+  - intent: time_require
+  - action: utter_time_require
+
+- rule: ask for issue whenever user is unhappy
+  steps:
+  - intent: mood_unhappy
+  - action: utter_ask_for_issue
+
+- rule: tell hi there when user start the chatbot
+  steps:
+  - intent: start
+  - action: utter_start
+
+- rule: tell ok 
+  steps:
+  - intent: affirm
+  - action: utter_ok
+
+- rule: tell block names
+  steps:
+  - intent: ask_blocks
+  - action: utter_show_blocks
+
+- rule: tell lab names
+  steps:
+  - intent: ask_labs
+  - action: utter_show_labs
